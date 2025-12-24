@@ -3,7 +3,7 @@ async function fetchData(){
 
     try{
         const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`, { method: 'POST' });
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`, { method: 'GET' });
 
         if(!response.ok){
             throw new Error('Could not fetch resource');
